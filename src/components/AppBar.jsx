@@ -1,19 +1,20 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import Constants from 'expo-constants'
+import { useNavigate } from 'react-router-native'
 
 export const AppBar = () => {
-  // const navigation = useNavigation()
+  const navigate = useNavigate()
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button} onPress=''>
+      <TouchableOpacity style={styles.button} onPress={() => navigate('/')}>
         <Text style={styles.buttonText}>Home</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress=''>
+      <TouchableOpacity style={styles.button} onPress={() => navigate('/gallery')}>
         <Text style={styles.buttonText}>Gallery</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress=''>
+      <TouchableOpacity style={styles.button} onPress={() => navigate('/contact')}>
         <Text style={styles.buttonText}>Contact</Text>
       </TouchableOpacity>
     </View>
