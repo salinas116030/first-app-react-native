@@ -8,23 +8,23 @@ const parseThousands = value => {
     : String(value)
 }
 
-const RepositoryStats = item => {
+const RepositoryStats = props => {
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
       <View>
-        <StyledText>{parseThousands(item.stargazersCount)}</StyledText>
+        <StyledText>{parseThousands(props.stargazersCount)}</StyledText>
         <StyledText align='center' fontWeight='bold'>Stars</StyledText>
       </View>
       <View>
-        <StyledText>{parseThousands(item.forksCount)}</StyledText>
+        <StyledText>{parseThousands(props.forksCount)}</StyledText>
         <StyledText align='center' fontWeight='bold'>Forks</StyledText>
       </View>
       <View>
-        <StyledText>{parseThousands(item.reviewCount)}</StyledText>
+        <StyledText>{parseThousands(props.reviewCount)}</StyledText>
         <StyledText align='center' fontWeight='bold'>Review</StyledText>
       </View>
       <View>
-        <StyledText>{parseThousands(item.ratingAverage)}</StyledText>
+        <StyledText>{parseThousands(props.ratingAverage)}</StyledText>
         <StyledText align='center' fontWeight='bold'>Rating</StyledText>
       </View>
 
